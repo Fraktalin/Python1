@@ -18,13 +18,15 @@ from itertools import count
 # my_variable = "assert"
 my_variable = "assert_exception"
 
-
 starts_with_digit = my_variable[0].isdigit()
 has_uppercase = any(c.isupper() for c in my_variable)
-has_invalid_char = any(c in string.punctuation.replace("_", "") or c.isspace() for c in my_variable)
+has_invalid_char = any((c in string.punctuation.replace("_", "")) or (c.isspace()) for c in my_variable)
 is_keyword = my_variable in keyword.kwlist
-more_than_one_underscore = my_variable.count("_") > 1
+only_underscores = all(c == "_" for c in my_variable)
+more_than_one_underscore = only_underscores and my_variable.count("_") > 1
+
 print(string.punctuation)
+
 is_valid = not (
     starts_with_digit or
     has_uppercase or
@@ -34,3 +36,4 @@ is_valid = not (
 )
 
 print(is_valid)
+
