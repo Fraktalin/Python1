@@ -2,21 +2,8 @@ import string
 import keyword
 from itertools import count
 
-# my_variable = "_"
-# my_variable = "__"
-# my_variable = "___"
-# my_variable = "x"
-# my_variable = "get_value"
-# my_variable = "get value"
-# my_variable = "get!value"
-# my_variable = "some_super_puper_value"
-# my_variable = "Get_value"
-# my_variable = "get_Value"
-# my_variable = "getValue"
-# my_variable = "3m"
-# my_variable = "m3"
-# my_variable = "assert"
-my_variable = "assert_exception"
+my_variable = (input("Введіть назву змінної: "))
+
 
 starts_with_digit = my_variable[0].isdigit()
 has_uppercase = any(c.isupper() for c in my_variable)
@@ -25,7 +12,6 @@ is_keyword = my_variable in keyword.kwlist
 only_underscores = all(c == "_" for c in my_variable)
 more_than_one_underscore = only_underscores and my_variable.count("_") > 1
 
-print(string.punctuation)
 
 is_valid = not (
     starts_with_digit or
