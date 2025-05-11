@@ -1,4 +1,4 @@
-def add_one(some_list):
+def add_one(some_list:list)->list:
     joined = ""
     for i in some_list:
         joined += str(i)

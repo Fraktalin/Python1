@@ -1,6 +1,6 @@
 import string
 
-def is_palindrome(text):
+def is_palindrome(text:str)->bool:
     string.punctuation += " "
     clean_text = ''.join(ch for ch in text if ch not in string.punctuation)
     reversed = clean_text[::-1]

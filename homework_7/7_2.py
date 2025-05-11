@@ -1,7 +1,7 @@
 from os.path import split
 
 
-def correct_sentence(text):
+def correct_sentence(text:str)-> str:
     new_sentence = text.split(" ")
     new_sentence[0] = new_sentence[0].capitalize()
     new_sentence = " ".join(new_sentence)

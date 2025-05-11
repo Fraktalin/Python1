@@ -1,4 +1,4 @@
-def common_elements():
+def common_elements()->set:
     first_range = range(3, 100, 3)
     first_numbers = {0}
     for i in first_range:

@@ -1,4 +1,4 @@
-def difference (*args):
+def difference(*args: int | float) -> float:
     new_list = list(args)
     if len(new_list) == 0:
         return 0

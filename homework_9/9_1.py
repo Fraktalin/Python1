@@ -1,4 +1,4 @@
-def popular_words (text, words):
+def popular_words (text:str, words:list)->set:
     splitted = text.lower().split(" ")
     count_words = {}
     for word in words:
