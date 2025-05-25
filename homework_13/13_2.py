@@ -1,32 +1,32 @@
 class Counter:
 
-    def __init__(self, current=1, min_value=0, max_value=10):
-        self.current = current
-        self.min_value = min_value
-        self.max_value = max_value
+    def __init__(self, current: int = 1, min_value: int = 0, max_value: int = 10) -> None:
+        self.current: int = current
+        self.min_value: int = min_value
+        self.max_value: int = max_value
 
-    def set_current(self, start):
+    def set_current(self, start: int) -> None:
         self.current = start
 
-    def set_max(self, max_max):
+    def set_max(self, max_max: int) -> None:
         self.max_value = max_max
 
-    def set_min(self, min_min):
+    def set_min(self, min_min: int) -> None:
         self.min_value = min_min
 
-    def step_up(self):
+    def step_up(self) -> None:
         if self.current < self.max_value:
             self.current += 1
         else:
             raise ValueError("Достигнут максимум")
 
-    def step_down(self):
+    def step_down(self) -> None:
         if self.current > self.min_value:
             self.current -= 1
         else:
             raise ValueError("Достигнут минимум")
 
-    def get_current(self):
+    def get_current(self) -> int:
         return self.current
 
 counter = Counter()
